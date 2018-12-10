@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SwiftTransferController extends TransferController<SwiftTransfer> {
 
     @Autowired
-    public SwiftTransferController(TransferService service) {
+    public SwiftTransferController(TransferService<SwiftTransfer> service) {
         super(service);
     }
 

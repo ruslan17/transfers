@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InternalTransferController extends TransferController<InternalTransfer> {
 
     @Autowired
-    public InternalTransferController(TransferService service) {
+    public InternalTransferController(TransferService<InternalTransfer> service) {
         super(service);
     }
 

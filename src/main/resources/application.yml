@@ -1,34 +1,11 @@
 server:
   port: 8484
 
-spring:
-  jpa:
-    database: postgresql
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      # DISABLE JPA VERSION EXCEPTION
-      hibernate.temp.use_jdbc_metadata_defaults: false
-    open-in-view: true
-
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/transfers?stringtype=unspecified
-    username: transfer_user
-    password: admin
-
 transfers:
     route:
       swift: /api/transfers/swift
       internal: /api/transfers/internal
 
     methods:
-      check: /checkPayment
-      approve: /approvePayment
-
-    # TODO Change origins on production
-    cross:
-      origin: http://localhost:63342
+      check: /check
+      approve: /approve
